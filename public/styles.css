@@ -1,0 +1,156 @@
+:root {
+  font-family: Arial, sans-serif;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+  color: #222;
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.dashboard-grid article {
+  background: #f1f4fb;
+  padding: 0.75rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.metric-label {
+  margin: 0;
+  color: #51607a;
+  font-size: 0.9rem;
+}
+
+.metric-value {
+  margin: 0.35rem 0 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+}
+
+input,
+select,
+textarea,
+button {
+  padding: 0.55rem;
+  border: 1px solid #d0d7e2;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+button {
+  background: #0a66ff;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.92;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.booking-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.booking-item {
+  border: 1px solid #e1e8f2;
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+.booking-meta {
+  margin: 0 0 0.55rem;
+  color: #3d4d67;
+  font-size: 0.92rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.badge.pending {
+  background: #fff3cd;
+}
+
+.badge.approved {
+  background: #d4edda;
+}
+
+.badge.rejected {
+  background: #f8d7da;
+}
+
+.action-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-row button.reject {
+  background: #d93025;
+}
+
+.small-note {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: #596a84;
+}
+
+@media (max-width: 640px) {
+  .dashboard-grid,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
