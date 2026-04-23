@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vehicle Booking System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Vehicle Booking System</h1>
+
+      <section class="card">
+        <h2>Dashboard</h2>
+        <div id="dashboard" class="dashboard-grid">
+          <article>
+            <p class="metric-label">Available today</p>
+            <p id="availableCount" class="metric-value">-</p>
+          </article>
+          <article>
+            <p class="metric-label">Booked</p>
+            <p id="bookedCount" class="metric-value">-</p>
+          </article>
+          <article>
+            <p class="metric-label">Pending</p>
+            <p id="pendingCount" class="metric-value">-</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>New Booking</h2>
+        <form id="bookingForm" class="form-grid">
+          <label>
+            Name
+            <input type="text" name="name" required />
+          </label>
+
+          <label>
+            Car
+            <select name="car" id="carSelect" required></select>
+          </label>
+
+          <label>
+            Date
+            <input type="date" name="date" required />
+          </label>
+
+          <label>
+            Time
+            <input type="time" name="time" required />
+          </label>
+
+          <label class="full-width">
+            Purpose
+            <textarea name="purpose" rows="3" required></textarea>
+          </label>
+
+          <button type="submit">Submit Booking</button>
+        </form>
+        <p id="formMessage"></p>
+      </section>
+
+      <section class="card">
+        <h2>Manager Review</h2>
+        <div id="bookingList" class="booking-list"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
